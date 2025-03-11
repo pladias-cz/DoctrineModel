@@ -11,12 +11,7 @@ trait TId
 
     #[Column(type: Types::INTEGER, unique: true, nullable: false)]
     #[Id, GeneratedValue(strategy: 'IDENTITY')]
-    protected ?int $id;
-
-    public function getId(): int
-    {
-        return $this->id;
-    }
+    private(set) ?int $id;
 
     public function __clone()
     {

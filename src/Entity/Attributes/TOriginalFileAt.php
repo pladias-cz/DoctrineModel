@@ -9,12 +9,7 @@ trait TOriginalFileAt
 {
 
     #[Column(name: 'original_file_timestamp', type: Types::DATETIME_IMMUTABLE, nullable: true, options: ['comment' => 'Timestamp of original file creation'])]
-    protected ?DateTimeImmutable $originalFileTimestamp;
-
-    public function getOriginalFileAt(): ?DateTimeImmutable
-    {
-        return $this->originalFileTimestamp;
-    }
+    private(set) ?DateTimeImmutable $originalFileTimestamp;
 
     public function setOriginalFileAt(?DateTimeImmutable $timestamp): mixed
     {

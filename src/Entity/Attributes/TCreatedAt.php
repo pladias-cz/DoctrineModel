@@ -10,12 +10,7 @@ trait TCreatedAt
 {
 
     #[Column(type: Types::DATETIME_IMMUTABLE, nullable: false)]
-    protected DateTimeImmutable $createdAt;
-
-    public function getCreatedAt(): DateTimeImmutable
-    {
-        return $this->createdAt;
-    }
+    private(set) DateTimeImmutable $createdAt;
 
     public function setCreatedAt(): mixed
     {

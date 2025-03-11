@@ -10,12 +10,7 @@ trait TLastEditAt
 {
 
     #[Column(name: 'lastedit_timestamp', type: Types::DATETIME_MUTABLE, nullable: false, options: ['default' => 'CURRENT_TIMESTAMP'])]
-    protected ?DateTime $lastEdit = null;
-
-    public function getLastEditAt(): DateTime
-    {
-        return $this->lastEdit;
-    }
+    private(set) ?DateTime $lastEdit = null;
 
     #[PreUpdate]
     public function setLastEditAt(): mixed
