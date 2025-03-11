@@ -21,31 +21,31 @@ class TaxonRanks
     const CULTIVAR = array(57);
 
     #[Column(name: 'abbrev_eng', type: 'string')]
-    private(set) string $abbreviationEng;
+    protected(set) string $abbreviationEng;
 
     #[Column(type: 'string')]
-    private(set) string $category;
+    protected(set) string $category;
 
     #[Column(type: 'string')]
-    private(set) string $icn;
+    protected(set) string $icn;
 
     #[Column(name: 'id_dani', type: 'string')]
-    private(set) string $idDanihelka;
+    protected(set) string $idDanihelka;
 
     #[Column(type: 'string')]
-    private(set) string $succession;
+    protected(set) string $succession;
 
     #[Column(name: 'id_tv3', type: 'string')]
-    private(set) string $id_tv3;
+    protected(set) string $id_tv3;
 
     #[Column(name: 'name_addon', type: 'string')]
-    private(set) string $nameSuffix;
+    protected(set) string $nameSuffix;
 
     #[Column(name: 'name_cz', type: 'string')]
-    private(set) string $nameCz;
+    protected(set) string $nameCz;
 
     #[Column(name: 'name_eng', type: 'string')]
-    private(set) string $nameEng;
+    protected(set) string $nameEng;
 
     public function isSpeciesOrLower(): bool
     {

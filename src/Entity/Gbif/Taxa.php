@@ -17,28 +17,28 @@ class Taxa
     use TId;
 
     #[Column(name: 'taxon_key', type: 'integer')]
-    private(set) int $taxonKey;
+    protected(set) int $taxonKey;
 
-    #[Column(name:'scientific_name', type: 'string')]
-    private(set) string $scientificName;
+    #[Column(name: 'scientific_name', type: 'string')]
+    protected(set) string $scientificName;
 
     #[Column(name: 'accepted_taxon_key', type: 'integer')]
-    private(set) int $acceptedTaxonKey;
+    protected(set) int $acceptedTaxonKey;
 
-    #[Column(name:'accepted_scientific_name', type: 'string')]
-    private(set) string $acceptedScientificName;
+    #[Column(name: 'accepted_scientific_name', type: 'string')]
+    protected(set) string $acceptedScientificName;
 
-    #[Column(name:'taxon_rank', type: 'string')]
-    private(set) string $taxonRank;
+    #[Column(name: 'taxon_rank', type: 'string')]
+    protected(set) string $taxonRank;
 
     #[Column(type: 'string')]
-    private(set) string $species;
+    protected(set) string $species;
 
     #[Column(name: 'species_key', type: 'integer')]
-    private(set) int $speciesKey;
+    protected(set) int $speciesKey;
 
     #[ManyToOne(targetEntity: Taxons::class)]
     #[JoinColumn(name: 'pladias_taxon_id', referencedColumnName: 'id')]
-    private(set) Taxons $pladiasTaxon;
+    protected(set) Taxons $pladiasTaxon;
 
 }

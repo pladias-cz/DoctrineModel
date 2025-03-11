@@ -14,40 +14,40 @@ class Users
     use TId;
 
     #[Column(type: 'boolean')]
-    private(set) bool $biblioadmin;
+    protected(set) bool $biblioadmin;
 
     #[Column(type: 'boolean')]
-    private(set) bool $deleted;
+    protected(set) bool $deleted;
 
     #[Column(type: 'string')]
-    private(set) string $description;
+    protected(set) string $description;
 
     #[Column(type: 'string')]
-    private(set) string $email;
+    protected(set) string $email;
 
     #[Column(type: 'integer')]
-    private(set) int $last_taxon_id;
+    protected(set) int $last_taxon_id;
 
     #[Column(type: 'boolean')]
-    private(set) bool $mapadmin;
+    protected(set) bool $mapadmin;
 
     #[Column(type: 'string')]
-    private(set) string $name;
+    protected(set) string $name;
 
     #[Column(type: 'string')]
-    private(set) string $password;
+    protected(set) string $password;
 
     #[Column(type: 'string')]
-    private(set) string $surname;
+    protected(set) string $surname;
 
     #[Column(type: 'boolean')]
-    private(set) bool $sysadmin;
+    protected(set) bool $sysadmin;
 
     #[Column(type: 'boolean')]
-    private(set) bool $taxonadmin;
+    protected(set) bool $taxonadmin;
 
     #[Column(type: 'boolean')]
-    private(set) bool $traitadmin;
+    protected(set) bool $traitadmin;
 
 
 }

@@ -1,6 +1,7 @@
-<?php declare(strict_types = 1);
+<?php declare(strict_types=1);
 
 namespace Pladias\ORM\Entity\Attributes;
+
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\GeneratedValue;
@@ -11,7 +12,7 @@ trait TId
 
     #[Column(type: Types::INTEGER, unique: true, nullable: false)]
     #[Id, GeneratedValue(strategy: 'IDENTITY')]
-    private(set) ?int $id;
+    protected(set) ?int $id;
 
     public function __clone()
     {

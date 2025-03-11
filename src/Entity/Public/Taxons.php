@@ -18,58 +18,58 @@ class Taxons
 
     #[ManyToOne(targetEntity: TaxonRanks::class)]
     #[JoinColumn(name: 'rank', referencedColumnName: 'id')]
-    protected TaxonRanks $rank;
+    protected(set) TaxonRanks $rank;
 
     #[Column(type: 'string')]
-    private(set) string $author;
+    protected(set) string $author;
 
     #[Column(type: 'string')]
-    private(set) string $comment;
+    protected(set) string $comment;
 
     #[Column(type: 'integer')]
-    private(set) int $depth;
+    protected(set) int $depth;
 
     #[Column(name: 'depth_backup', type: 'integer')]
-    private(set) int $depthBackup;
+    protected(set) int $depthBackup;
 
     #[Column(name: 'id_dani', type: 'string')]
-    private(set) string $idDanihelka;
+    protected(set) string $idDanihelka;
 
     #[Column(type: 'integer')]
-    private(set) int $lft;
+    protected(set) int $lft;
 
-    #[Column(name:'lft_backup', type: 'integer')]
-    private(set) int $lft_backup;
+    #[Column(name: 'lft_backup', type: 'integer')]
+    protected(set) int $lft_backup;
 
     #[Column(name: 'name_cz', type: 'string')]
-    private(set) string $nameCz;
+    protected(set) string $nameCz;
 
     #[Column(name: 'name_html', type: 'string')]
-    private(set) string $nameHtml;
+    protected(set) string $nameHtml;
 
     #[Column(name: 'name_lat', type: 'string')]
-    private(set) string $nameLatin;
+    protected(set) string $nameLatin;
 
     #[Column(type: 'string')]
-    private(set) string $parents;
+    protected(set) string $parents;
 
     #[Column(name: 'parents_cz', type: 'string')]
-    private(set) string $parentsCz;
+    protected(set) string $parentsCz;
 
     #[Column(type: 'integer')]
-    private(set) int $rgt;
+    protected(set) int $rgt;
 
-    #[Column(name:'rgt_backup', type: 'integer')]
-    private(set) int $rgt_backup;
+    #[Column(name: 'rgt_backup', type: 'integer')]
+    protected(set) int $rgt_backup;
 
     #[Column(type: 'boolean')]
-    private(set) bool $suppressed;
+    protected(set) bool $suppressed;
 
     /**
      * hide localities on the public presentation
      */
     #[Column(type: 'boolean')]
-    private(set) bool $protected;
+    protected(set) bool $protected;
 
 
     public function getNamePreslia()
