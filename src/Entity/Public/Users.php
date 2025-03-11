@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping\Table;
 use Pladias\ORM\Entity\Attributes\TId;
 
 #[Entity()]
-#[Table(name: '.users')]
+#[Table(name: 'public.users')]
 class Users
 {
     use TId;
