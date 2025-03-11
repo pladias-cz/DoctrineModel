@@ -1,0 +1,12 @@
+{
+  "name": "pladias-cz/doctrine-orm",
+  "autoload": {
+    "psr-4": {
+      "Pladias\\ORM\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">= 8.4",
+    "nettrine/orm": "^0.8"
+  }
+}
