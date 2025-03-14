@@ -32,13 +32,19 @@ class Taxa
     protected(set) string $taxonRank;
 
     #[Column(type: 'string')]
-    protected(set) string $species;
+    protected(set) ?string $species;
 
     #[Column(name: 'species_key', type: 'integer')]
-    protected(set) int $speciesKey;
+    protected(set) ?int $speciesKey;
 
     #[ManyToOne(targetEntity: Taxons::class)]
     #[JoinColumn(name: 'pladias_taxon_id', referencedColumnName: 'id')]
-    protected(set) Taxons $pladiasTaxon;
+    protected(set) ?Taxons $pladiasTaxon;
+
+    public function setPladiasTaxon(?Taxons $pladiasTaxon): self
+    {
+        $this->pladiasTaxon = $pladiasTaxon;
+        return $this;
+    }
 
 }
